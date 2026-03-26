@@ -15,6 +15,9 @@ const Navbar = () => {
       <li>
         <Link to="covarage">Coverage</Link>
       </li>
+      <li>
+        <Link to="sendparcel">Send A Parcel</Link>
+      </li>
     </>
   );
   return (

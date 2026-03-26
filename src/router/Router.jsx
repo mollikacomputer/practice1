@@ -7,6 +7,8 @@ import AuthLayout from "../Layout/AuthLayout";
 import Login from "../Authentication/Login";
 import Register from "../Authentication/Register";
 import Covarage from "../pages/Covarage/Covarage";
+import PrivateRoute from "../Routes/PrivateRoute";
+import SendParcel from "../pages/SendParcel/SendParcel";
 
 export const Router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ export const Router = createBrowserRouter([
         path: "covarage",
         Component: Covarage,
         loader: () => fetch("./warehouses.json"),
+      },
+      {
+        path: "sendparcel",
+        element: (
+          <PrivateRoute>
+            <SendParcel></SendParcel>
+          </PrivateRoute>
+        ),
       },
     ],
   },
