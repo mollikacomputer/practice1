@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Navigate } from "react-router";
 
 const PrivateRoute = ({ children }) => {
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
   const user = {
     name: "Ranjit",
